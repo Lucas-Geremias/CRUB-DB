@@ -1,17 +1,16 @@
 package com.provadb.domain;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Objects;
 
 @Entity
-public class Dono {
+public class Animal {
 
     @Id
     private Long id;
 
     private String nome;
-    private Long cpf;
+    private String raca;
 
     public Long getId() {
         return id;
@@ -29,20 +28,20 @@ public class Dono {
         this.nome = nome;
     }
 
-    public Long getCpf() {
-        return cpf;
+    public String getRaca() {
+        return raca;
     }
 
-    public void setCpf(Long cpf) {
-        this.cpf = cpf;
+    public void setRaca(String raca) {
+        this.raca = raca;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Dono dono = (Dono) o;
-        return id.equals(dono.id);
+        Animal animal = (Animal) o;
+        return id.equals(animal.id);
     }
 
     @Override
