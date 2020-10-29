@@ -31,7 +31,7 @@ public class Animal {
         this.nome = nome;
     }
 
-    public String getRaca() {
+    public String getRaca(String s) {
         return raca;
     }
 
